@@ -74,6 +74,29 @@ h1 sup{
     background-size: cover;
     backdrop-filter: blur(8px);
 }
+select{
+    color: black;
+
+}
+form{
+    display:flex;
+    flex-direction: column;
+    border: 2px #f7b500 dashed;
+    border-radius: 20px;
+    backdrop-filter: blur(50px);
+    width: 30%;
+    margin: auto; 
+    margin-top: 10%; 
+    padding: 3%;
+}
+input{
+    margin-bottom: 2%;
+    color: black;
+}
+option{
+    color: black;
+}
+
 /*
 (background.jpg)
 https://www.pexels.com/photo/bird-s-eye-view-of-parked-cars-1004409/
