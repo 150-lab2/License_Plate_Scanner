@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>PlateMate | Sign Up</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/sign_up.css">
+    </head>
+    <body>
+        <div class="flex-container">
+            <header>
+                <nav>
+                    <h1>PlateMate<sup>&copy;</sup></h1>
+                    <ul>
+                        <li><a href="index.html">Our Mission</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li ><a href="sign_up.html">Sign Up</a></li>
+                        <li><a href="log_in.html">Log In</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="content">
+                <form>
+                    <label>Choose Organization:</label> 
+                        <select id="org" name="org" required>
+                            <option value="none">-</option>
+                            <option value="Fresno State">Fresno State</option>
+                            <option value="Fresno City College">Fresno City College</option>
+                            <option value="Fresno Pacific University">Fresno Pacific University</option>
+                        </select>
+                        <label for="first_name">First Name:</label> 
+                        <input type="text" id="first_name" name="first_name" required>
+                        <label for="last_name">Last Name:</label> 
+                        <input type="text" id="last_name" name="last_name" required>
+                        <label for="email">Email:</label> 
+                        <input type="email" id="email" name="email" required>
+                        <label for="license_plate_number">License Plate Number:</label> 
+                        <input type="text" id="license_plate_number" name="license_plate_number" required>
+                        <label for="user_password">Create Password:</label> 
+                        <input type="text" id="user_password" name="user_password" required>
+                        <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
