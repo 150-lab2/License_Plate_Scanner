@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    color: #FBD1A7;
+}
+html, body{
+    height: 100%;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+.flex-container{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+header{
+    flex: 0 1 auto;
+    background: #01273C;
+    border-bottom:2px #f7b500 dashed;
+    height: 62px;
+}
+h1{
+    border: 2px #f7b500 dashed;
+    margin: 9px 0px 0px 9px;
+    border-radius: 10px;
+    /*background-color: red;*/
+    width: 11ch;
+    line-height: 50px;
+    height: 62px;
+    float:left;
+}
+nav{
+    display: inline-block;
+    text-align: center;
+}
+ul{
+    /*background-color: blue;*/
+    height: 62px;
+    float: right;
+    line-height: 62px;
+}
+li{
+    display: inline-block;
+    padding: 0 10px;
+    /*background-color: yellow;*/
+}
+header a{
+    text-decoration: none;
+    text-decoration: overline underline rgba(247, 181, 0, 0);
+    transition: 0.3s;
+}
+a:hover{
+    text-decoration: dashed overline underline rgba(247, 181, 0, .8);
+    padding: 0px 7px;
+    color: #f7b500;
+}
+div.content p{
+    border: 2px #f7b500 dashed;
+    border-radius: 20px;
+    backdrop-filter: blur(50px);
+    width: 30%;
+    margin: auto; 
+    margin-top: 10%; 
+    padding: 3%;
+}
+h1 sup{
+    font-size: 10px;
+}
+.flex-container .content{
+    flex: 1 1 auto;
+    background: #353C42;
+    background-image: linear-gradient(180deg, rgba(1, 39, 60, 1),rgba(1, 1, 1, .5), rgba(53, 60, 66, .5)),
+                      url("../images/background3.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+}
+select{
+    color: black;
+
+}
+form{
+    display:flex;
+    flex-direction: column;
+    border: 2px #f7b500 dashed;
+    border-radius: 20px;
+    backdrop-filter: blur(50px);
+    width: 30%;
+    margin: auto; 
+    margin-top: 10%; 
+    padding: 3%;
+}
+input{
+    color: black;
+}
+option{
+    color: black;
+}
+label{
+    margin-top: 2%;
+}
+input[type="submit"]{
+    width:50px;
+    background-color:#f7b500;
+    border:none;
+    margin-top:25px;
+}
+
+/*
+(background.jpg)
+https://www.pexels.com/photo/bird-s-eye-view-of-parked-cars-1004409/
+Photo by Pok Rie: https://www.pexels.com/photo/bird-s-eye-view-of-parked-cars-1004409/
+
+(background1.jpg)
+https://www.pexels.com/photo/aerial-view-of-parking-area-2220292/
+Photo by K HOWARD: https://www.pexels.com/photo/aerial-view-of-parking-area-2220292/
+
+(background2.jpg)
+https://unsplash.com/photos/OKPhtQsyvM8
+https://unsplash.com/@lancaster83
+*/

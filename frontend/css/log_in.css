@@ -90,11 +90,19 @@ form{
     padding: 3%;
 }
 input{
-    margin-bottom: 2%;
     color: black;
 }
 option{
     color: black;
+}
+label{
+    margin-top: 2%;
+}
+input[type="submit"]{
+    width:50px;
+    background-color:#f7b500;
+    border:none;
+    margin-top:25px;
 }
 
 /*
