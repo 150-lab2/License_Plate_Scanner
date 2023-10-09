@@ -65,7 +65,7 @@ app.get('/sign_up', function (req, res) {
 });
 
 // POST requests
-app.post('/sign_up/form', function(req, res) {
+app.post('/sign_up', function(req, res) {
     console.log(req.body);
     res.redirect('/sign_up');
 });
