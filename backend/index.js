@@ -1,40 +1,40 @@
 let express = require('express');
 let app = express();
 let bodyParser = require('body-parser');
-let mongoose = require("mongoose")
+let mongoose = require('mongoose')
 let path = require('node:path');
+const { type } = require('node:os');
 require('dotenv').config();
 
 
 // Initial Server Setup
-/*
-mongoose.connect(process.env.MONGO_URI, { useUnifiedTopology: true, useNewUrlParser: true });
-mongoose.connection.once("open", function() {
-  console.log("Connected to database");
-});*/
+mongoose.connect(process.env.MONGO_URI, { 
+    useUnifiedTopology: true, 
+    useNewUrlParser: true 
+})
+    .then(() => {
+        console.log('Connected to database');
+    })
+    .catch((err) => {
+        console.error('Failed to connect to', err);
+    });
 
 // Setup Schemas
-/*
-let userSchema = mongoose.Schema({
-    first_name: {type: String, required: true},
-    last_name: {type: String, required: true},
-})
+const Org = mongoose.model('Org', new mongoose.Schema({
+    name: String
+}));
 
-let licenseSchema = mongoose.Schema({
-    plate_number: {type: String, required: true},
-    expiration: {type: String, required: true}
-})*/
-
-// Temporary Schema
-let userSchema = mongoose.Schema({
-    org: {type: String, required: true},
-    first_name: {type: String, required: true},
-    last_name: {type: String, required: true},
-    email: {type: String, required: true},
-    license_plate_number: {type: String, required: true},
-    user_password: {type: String, required: true}
-});
-
+const User = mongoose.model('User', new mongoose.Schema({
+    first_name: String,
+    last_name: String,
+    email: String,
+    password: String,
+    plate_number: String,
+    permits: [{
+        expiration: Date, 
+        org: { type: mongoose.Schema.Types.ObjectId, ref: 'Org' }
+    }]
+}));
 
 // Log requests to console
 app.use('/', (req, res, next) => {
@@ -67,11 +67,45 @@ app.get('/sign_up', (req, res) => {
 // POST requests
 app.post('/log_in', (req, res) => {
     console.log(req.body);
+
+    User.findOne({ email: req.body.email }).then((user) => {
+        if (user) {
+            console.log('Valid User');
+            if (user.password == req.body.user_password) {
+                console.log('Correct Password');
+            } else {
+                console.log('Incorrect Password');
+            }
+            return res.status(200);
+        } else {
+            console.log('Invalid User');
+            return res.status(400);
+        }
+    });
     res.redirect('log_in');
 });
-
 app.post('/sign_up', (req, res) => {
     console.log(req.body);
+    
+    // Look for existing user
+    User.findOne({ email: req.body.email }).then((user) => {
+        if (user) {
+            console.log('User already exists');
+            return res.status(400);
+        } else {
+            console.log('New User');
+            const newUser = new User({
+                first_name: req.body.first_name,
+                last_name: req.body.last_name,
+                email: req.body.email,
+                password: req.body.user_password,
+                plate_number: req.body.license_plate_number
+            });
+            newUser.save();
+            return res.status(200);
+        }
+    });
+
     res.redirect('/sign_up');
 });
 
