@@ -42,6 +42,7 @@ app.use('/', (req, res, next) => {
         next();
     });
 
+
 // Set up body-paser
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -105,7 +106,6 @@ app.post('/sign_up', (req, res) => {
             return res.status(200);
         }
     });
-
     res.redirect('/sign_up');
 });
 
