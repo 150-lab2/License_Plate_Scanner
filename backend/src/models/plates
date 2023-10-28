@@ -1,0 +1,8 @@
+const mongoose = require('mongoose');
+
+const PlateSchema = new mongoose.Schema({
+    number: String,
+    permits: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Permit' }]
+});
+
+module.exports = mongoose.model('Plate', UserSchema);
