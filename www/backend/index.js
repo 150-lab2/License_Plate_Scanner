@@ -8,7 +8,7 @@ require('dotenv').config();
 
 
 // Initial Server Setup
-mongoose.connect(process.env.MONGO_URI, { 
+mongoose.connect(process.env.MONGO_LOCAL, { 
     useUnifiedTopology: true, 
     useNewUrlParser: true 
 })
@@ -19,11 +19,10 @@ mongoose.connect(process.env.MONGO_URI, {
         console.error('Failed to connect to', err);
     });
 
-// Setup Schemas
-const Org = mongoose.model('Org', new mongoose.Schema({
-    name: String
-}));
+// Import mongoose models
+const User = require(path.join(__dirname,'src','models','users.js'));
 
+/*
 const User = mongoose.model('User', new mongoose.Schema({
     first_name: String,
     last_name: String,
@@ -34,7 +33,8 @@ const User = mongoose.model('User', new mongoose.Schema({
         expiration: Date, 
         org: { type: mongoose.Schema.Types.ObjectId, ref: 'Org' }
     }]
-}));
+}));*/
+
 
 // Log requests to console
 app.use('/', (req, res, next) => {
@@ -96,11 +96,7 @@ app.post('/sign_up', (req, res) => {
         } else {
             console.log('New User');
             const newUser = new User({
-                first_name: req.body.first_name,
-                last_name: req.body.last_name,
-                email: req.body.email,
-                password: req.body.user_password,
-                plate_number: req.body.license_plate_number
+                email: req.body.email
             });
             newUser.save();
             return res.status(200);
