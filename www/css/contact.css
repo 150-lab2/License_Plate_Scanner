@@ -56,11 +56,15 @@ div.content p{
     border: 2px #f7b500 dashed;
     border-radius: 20px;
     backdrop-filter: blur(50px);
-    width: 40%;
+    width: 60%;
     margin: auto; 
     margin-top: 10%; 
     padding: 3%;
-    font-size: 20px;
+}
+p span{
+    font-weight: bold;
+    font-size: 22px;
+    color:#FBD1A7;
 }
 
 h1 sup{
@@ -70,11 +74,12 @@ h1 sup{
     flex: 1 1 auto;
     background: #353C42;
     background-image: linear-gradient(180deg, rgba(1, 39, 60, 1),rgba(1, 1, 1, .5), rgba(53, 60, 66, .5)),
-                      url("../images/background3.jpg");
+                      url("../images/background2.jpg");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
     backdrop-filter: blur(8px);
+    text-align: center;
 }
 /*
 (background.jpg)
