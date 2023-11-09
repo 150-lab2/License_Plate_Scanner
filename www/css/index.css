@@ -125,12 +125,40 @@ div#steps-content p{
     border: 2px #f7b500 dashed;
     border-radius: 1%;
     width: 50%;
-    margin: 3% auto; 
+    margin: 2% auto; 
     padding: 3%;
     font-size: 1.3vw;
     background-color: #01273C; 
     opacity: 0.95;
 } 
+dl{
+    background-color: #01273C; 
+    opacity: 0.95;
+    width: 50%;
+    margin: auto;
+    padding: 1%;
+    border: 2px #f7b500 dashed;
+    border-radius: 1%;
+}
+dt{
+    font-weight: bold;
+    color: #f7b500;
+}
+dd{
+    margin-bottom: 1%;
+}
+.floating {  
+    animation-name: floating;
+    animation-duration: 3.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+ 
+@keyframes floating {
+    0%   { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100% { transform: translate(0, -0px); }    
+}
 /*
 (background.jpg)
 https://www.pexels.com/photo/bird-s-eye-view-of-parked-cars-1004409/
