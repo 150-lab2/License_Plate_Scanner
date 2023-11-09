@@ -104,6 +104,14 @@ input[type="submit"]{
     border:none;
     margin-top:25px;
 }
+form button{
+    width:50px;
+    background-color:#f7b500;
+    border:none;
+    margin-top:25px;
+    color:black;
+
+}
 /*
 .g-signin2{
     position: absolute;

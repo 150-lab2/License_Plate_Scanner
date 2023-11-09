@@ -3,9 +3,6 @@
     <head>
         <title>PlateMate | Log In</title>
         <meta charset="UTF-8">
-        <meta name="google-signin-client_id" content="68662794944-ua29p1pnpspb99rosfosc2jl782f2uam.apps.googleusercontent.com">
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
         <link rel="stylesheet" href="css/log_in.css">
         <script src="js/log_in.js"></script>
     </head>
@@ -22,7 +19,15 @@
                 </nav>
             </header>
             <div class="content">
-                <div id="my-signin2"></div>
+                <form>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="user_password">Password:</label>
+                    <input type="text" id="user_password" name="user_password" required>
+                    <input type="submit" value="Submit">
+                    <button onclick="goToUser()">User</button>
+                    <button onclick="goToAdmin()">Admin</button>
+                </form>
             </div>
         </div>
     </body>
