@@ -82,14 +82,15 @@ form{
     display:flex;
     flex-direction: column;
     border: 2px #f7b500 dashed;
-    border-radius: 20px;
-    backdrop-filter: blur(50px);
+    background-color: #01273C;
+    opacity: 0.95;
+    border-radius: 1%;
     width: 30%;
     margin: auto; 
     margin-top: 10%; 
     padding: 3%;
 }
-input{
+form input{
     color: black;
 }
 option{
@@ -105,14 +106,18 @@ input[type="submit"]{
     margin-top:25px;
 }
 form button{
-    width:50px;
-    background-color:#f7b500;
-    border:none;
-    margin-top:25px;
-    color:black;
-
+    background-color: #01273C;
+    border: 2px #f7b500 dashed;
+    padding: 5px;
+    border-radius: 1%;
 }
-
+#other-logins{
+    text-align: center;
+}
+button:hover{
+    background-color: #f7b500;
+    color: #01273C;
+}
 /*
 .g-signin2{
     position: absolute;

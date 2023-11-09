@@ -65,9 +65,8 @@ div.content p{
 }
 p span{
     font-weight: bold;
-    font-size: 22px;
     color:#FBD1A7;
-}
+}   
 h2{
     margin-top: 1%;
     color:#FBD1A7;
@@ -83,7 +82,7 @@ h2{
     background-color: #01273C; 
     border: 2px #f7b500 dashed;
     opacity: 0.95;
-    width: 500px;
+    width: 52%;
     margin:auto;
     margin-top: 1%;
 }
@@ -102,6 +101,7 @@ h1 sup{
     backdrop-filter: blur(8px);
     text-align: center;
 }
+
 /*
 (background.jpg)
 https://www.pexels.com/photo/bird-s-eye-view-of-parked-cars-1004409/

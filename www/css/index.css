@@ -6,6 +6,7 @@ html, body{
     height: 100%;
     font-family: 'Helvetica', 'Arial', sans-serif;
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 .flex-container{
     display: flex;
@@ -111,7 +112,7 @@ div#greeter p{
     padding: 5px;
     font-size: 1.3vw;
     opacity: 0.95;
-    margin-top: 2%;
+    margin-top: 1%;
     border-radius: 1%;
 }
 .steps-button:hover{
@@ -133,8 +134,9 @@ div#steps-content p{
 } 
 dl{
     background-color: #01273C; 
+    font-size: 1.3vw;
     opacity: 0.95;
-    width: 50%;
+    width: 54%;
     margin: auto;
     padding: 1%;
     border: 2px #f7b500 dashed;
