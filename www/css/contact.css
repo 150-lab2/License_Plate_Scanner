@@ -72,12 +72,20 @@ h2{
     margin-top: 1%;
     color:#FBD1A7;
     background-color: #01273C; 
-    border: 2px #f7b500 solid;
+    color:#f7b500;
     opacity: 0.95;
     width: 380px;
     padding: 10px;
     margin:auto;
     border-radius: 1%;
+}
+#map{
+    background-color: #01273C; 
+    border: 2px #f7b500 dashed;
+    opacity: 0.95;
+    width: 500px;
+    margin:auto;
+    margin-top: 1%;
 }
 
 h1 sup{

@@ -153,11 +153,18 @@ dd{
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
- 
 @keyframes floating {
     0%   { transform: translate(0,  0px); }
     50%  { transform: translate(0, 15px); }
     100% { transform: translate(0, -0px); }    
+}
+#arrow{
+    color: #f7b500;
+    width: 1chr;
+    margin-left: 50%;
+    font-weight: bold;
+    font-size: 1.5vw;
+    position: absolute;
 }
 /*
 (background.jpg)
