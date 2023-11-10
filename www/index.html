@@ -3,28 +3,37 @@
     <head>
         <title>PlateMate | Home</title>
         <meta charset="UTF-8">
-        <meta name="google-signin-client_id" content="68662794944-ua29p1pnpspb99rosfosc2jl782f2uam.apps.googleusercontent.com">
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <meta Content-Security-Policy-Report-Only: script-src
-        https://accounts.google.com/gsi/client; frame-src
-        https://accounts.google.com/gsi/; connect-src
-        https://accounts.google.com/gsi/; />
         <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
-        <div class="flex-container">
+        <div id="home" class="flex-container">
             <header>
                 <nav>
                     <h1>PlateMate<sup>&copy;</sup></h1>
                     <ul>
-                        <li><a href="index.html">Our Mission</a></li>
+                        <li><a href="#steps">Our Mission</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                         <li><a href="log_in.html">Log In</a></li>
                     </ul>
                 </nav>
             </header>
             <div class="content">
-                <p>At PlateMate, we are committed to redefining the parking paradigm. Our mission goes beyond
+                <div id="greeter">
+                    <h2 style="margin-top: 2%;">Drive In.</h2>
+                    <h2>Verified.</h2>
+                    <h2>Peace out.</h2>
+                    <p style="font-style:italic;margin-top: 2%;">Go digital with instant permit verifcation.</p>
+                    
+                </div>
+                <a href="#steps"><button id="getStarted">Get Started</button></a>
+            </div>
+        </div>
+        <div id="steps" class="flex-container">
+            <p id="arrow">↑</p>
+            <div id="steps-content">
+                <a href="#home"><button style="width:56%;" class="steps-button floating">Click To Go Back</button></a>
+                <p><span style="font-weight:bold;color:#f7b500;">Mission Statement<br></span>
+                    At PlateMate, we are committed to redefining the parking paradigm. Our mission goes beyond
                     just providing a service; we aim to innovate and transform every aspect of the traditional
                     parking experience. Recognizing the challenges faced by vehicle owners - from misplaced physical
                     permits to undeserved fines - we've merged cutting-edge technology with user-centric design. Our
@@ -34,8 +43,20 @@
                     vision a reality for every driver, institution, and enforcement body. Together, we are driving the future 
                     of parking.
                 </p>
+                <dl>
+                    <dt>1. Sign Up & Register</dt>
+                        <dd>Users create an account, input their vehicle details, and digitally apply for their parking permit.</dd>
+                    <dt>2. Automatic Scan & Verify</dt>
+                        <dd>As vehicles enter designated areas, the system scans license plates in real-time and cross-references
+                        them with the centralized database for permit verification.
+                        </dd>
+                    <dt>3. Instant Feedback</dt>
+                        <dd>Parking enforcers recieve real-time verification results on their dashboard, while users get
+                        notifications regarding their parking status and any related updates.
+                        </dd>
+                  </dl>
+                <a href="log_in.html"><button class="steps-button">Sign Up Now</button></a>
             </div>
-
         </div>
     </body>
 </html>
