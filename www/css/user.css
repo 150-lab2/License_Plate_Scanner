@@ -68,8 +68,13 @@ h1 sup{
     backdrop-filter: blur(8px);
     text-align: center;
 }
-
-div.content p{
+#pfp{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: green;
+}
+#feed{
     border: 2px #f7b500 dashed;
     width: 60%;
     margin: auto; 
@@ -80,5 +85,42 @@ div.content p{
     font-size: 1vw;
     background-color: #01273C; 
     opacity: 0.95;
-    
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 2px #f7b500 dashed;
+}
+
+#name{
+    font-weight: bold;
+    margin: 1% 0%;
+    font-size: 1.5vw;
+}
+button{
+    margin-top: 2%;
+    background-color: #01273C;
+    border: 2px #f7b500 dashed;
+    padding: 1%;
+    font-size: 1.3vw;
+    opacity: 0.95;
+    border-radius: 1%;
+}
+button:hover{
+    color: #f7b500;
+    border: 2px #f7b500 solid;
+}
+#showcase{
+    width: 80%;
+    height: 25%;
+    margin: auto;
+    background-color: #FBD1A7;
+    overflow-y:scroll;
+}
+#empty{
+    color: #01273C;
+    font-weight: italic;
+    margin-top: 25%;
 }
