@@ -125,4 +125,7 @@ input{
     background-color: #FBD1A7;
     height: 40px;
     width: 30%;
+body{
+    background-color: #01273C;
+    color: #FBD1A7; 
 }

@@ -130,6 +130,19 @@ button:hover{
     border: 2px #01273C dashed;
     border-radius: 1%;
 }
+form button{
+    background-color: #01273C;
+    border: 2px #f7b500 dashed;
+    padding: 5px;
+    border-radius: 1%;
+}
+#other-logins{
+    text-align: center;
+}
+button:hover{
+    background-color: #f7b500;
+    color: #01273C;
+}
 /*
 .g-signin2{
     position: absolute;
