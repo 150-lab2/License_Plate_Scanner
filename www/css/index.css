@@ -6,7 +6,6 @@ html, body{
     height: 100%;
     font-family: 'Helvetica', 'Arial', sans-serif;
     scroll-behavior: smooth;
-    overflow: hidden;
 }
 .flex-container{
     display: flex;
@@ -81,7 +80,7 @@ h1 sup{
     margin: auto;
     margin-top: 10%;
     width: 40%;
-    height: 40%;
+    height: auto;
     background-color: #01273C;
     border: 2px #f7b500 dashed;
     opacity: 0.95;
@@ -91,7 +90,7 @@ h1 sup{
     margin-top: 2%;
     background-color: #01273C;
     border: 2px #f7b500 dashed;
-    padding: 5px;
+    padding: 1%;
     font-size: 1.3vw;
     opacity: 0.95;
     border-radius: 1%;
@@ -109,7 +108,7 @@ div#greeter p{
 .steps-button{
     background-color: #01273C;
     border: 2px #f7b500 dashed;
-    padding: 5px;
+    padding: 1%;
     font-size: 1.3vw;
     opacity: 0.95;
     margin-top: 1%;
@@ -125,7 +124,7 @@ div#greeter p{
 div#steps-content p{
     border: 2px #f7b500 dashed;
     border-radius: 1%;
-    width: 50%;
+    width: 70%;
     margin: 1% auto; 
     padding: 3%;
     font-size: 1.3vw;
@@ -136,7 +135,7 @@ dl{
     background-color: #01273C; 
     font-size: 1.3vw;
     opacity: 0.95;
-    width: 54%;
+    width: 74%;
     margin: auto;
     padding: 1%;
     border: 2px #f7b500 dashed;

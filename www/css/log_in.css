@@ -100,10 +100,35 @@ label{
     margin-top: 2%;
 }
 input[type="submit"]{
-    width:50px;
-    background-color:#f7b500;
-    border:none;
+    width: auto;
+    margin-bottom: 2%;
+    padding: 5px;
+    background-color: #01273C;
+    color: #FBD1A7;
+    border: 2px #f7b500 dashed;
     margin-top:25px;
+    border-radius: 1%;
+}
+input[type="submit"]:hover{
+    background-color: #f7b500;
+    color: #01273C;
+    border-radius: 1%;
+    border: 2px #01273C dashed;
+}
+form button{
+    background-color: #01273C;
+    border: 2px #f7b500 dashed;
+    padding: 5px;
+    border-radius: 1%;
+}
+#other-logins{
+    text-align: center;
+}
+button:hover{
+    background-color: #f7b500;
+    color: #01273C;
+    border: 2px #01273C dashed;
+    border-radius: 1%;
 }
 form button{
     background-color: #01273C;

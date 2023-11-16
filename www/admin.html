@@ -6,6 +6,30 @@
         <link rel="stylesheet" href="css/admin.css">
     </head>
     <body>
-        <p>Admin Profile Page</p>
+        <div class="flex-container">
+            <header>
+                <nav>
+                    <h1>PlateMate<sup>&copy;</sup></h1>
+                    <ul>
+                        <li><a href="log_in.html">Log Out</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="content">
+                <div id="feed">
+                    <img src="https://api.thecatapi.com/v1/images/search?format=src" alt="">
+                    <p id="name">Officer WhiskerBuster</p>
+                    <p style="font-weight: bold;">Organization: Furrsno State Cativersity</p>
+            
+                    <form>
+                        <legend>Query License Plate Number</legend>
+                        <input type="text" id="plate_number" name="plate_number" required>
+                        <!-- <input type="submit" value="Find"> use when we have server ready-->
+                    </form>
+                    
+                    <button onclick="verify()">Verify</button>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
