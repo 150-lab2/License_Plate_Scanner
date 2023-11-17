@@ -54,13 +54,39 @@ a:hover{
 }
 div.content p{
     border: 2px #f7b500 dashed;
-    border-radius: 20px;
-    backdrop-filter: blur(50px);
-    width: 40%;
+    border-radius: 1%;
+    width: 50%;
     margin: auto; 
-    margin-top: 10%; 
-    padding: 3%;
-    font-size: 20px;
+    margin-top: 1%;
+    height: 20%;
+    padding: 1%;
+    font-size: 1vw;
+    background-color: #01273C; 
+    opacity: 0.95;
+}
+p span{
+    font-weight: bold;
+    color:#FBD1A7;
+}   
+h2{
+    margin-top: 1%;
+    color:#FBD1A7;
+    background-color: #01273C; 
+    color:#f7b500;
+    opacity: 0.95;
+    width: 380px;
+    padding: 10px;
+    margin:auto;
+    border-radius: 1%;
+}
+#map{
+    background-color: #01273C; 
+    border: 2px #f7b500 dashed;
+    opacity: 0.95;
+    width: 52%;
+    margin:auto;
+    font-size: 1vw;
+    margin-top: 1%;
 }
 
 h1 sup{
@@ -70,12 +96,14 @@ h1 sup{
     flex: 1 1 auto;
     background: #353C42;
     background-image: linear-gradient(180deg, rgba(1, 39, 60, 1),rgba(1, 1, 1, .5), rgba(53, 60, 66, .5)),
-                      url("../images/background3.jpg");
+                      url("../images/background2.jpg");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
     backdrop-filter: blur(8px);
+    text-align: center;
 }
+
 /*
 (background.jpg)
 https://www.pexels.com/photo/bird-s-eye-view-of-parked-cars-1004409/
