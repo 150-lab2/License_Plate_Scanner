@@ -1,14 +1,10 @@
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
+    name: {first: String, last: String },
     email: { type: String, lowercase: true, unique: true },
+    password: String,
     plates: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Plate' }],
 });
 
-UserSchema.methods.createNewUser = (email, plateId) => {
-    this.email = email;
-    this.plates.push(plateId);
-    this.model.cre
-};
-
-module.exports = mongoose.model('User', UserSchema);
+exports.User = mongoose.model('User', UserSchema);
