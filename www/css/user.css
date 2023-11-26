@@ -124,3 +124,7 @@ button:hover{
     font-weight: italic;
     margin-top: 25%;
 }
+
+div#showcase p{
+    color:#01273C;
+}
