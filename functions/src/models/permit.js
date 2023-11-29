@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const PermitSchema = new mongoose.Schema({
-    range: { start: String, end: String },
+    range: { start: Date, end: Date },
     org: { type: mongoose.Schema.Types.ObjectId, ref: 'Org' }
 });
 
