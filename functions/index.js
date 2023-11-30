@@ -1,17 +1,20 @@
 const { onRequest } = require('firebase-functions/v2/https');
 const express = require('express');
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 // Initialize express app
 const app = express();
 app.use(express.json());
 
 // Databases
-MONGO_LOCAL = 'mongodb://127.0.0.1:27017/PlateMate';
-MONGO_URI = process.env.MONGO_URI;
+//const MONGO_LOCAL = 'mongodb://127.0.0.1:27017/PlateMate';
+//MONGO_URI = process.env.MONGO_URI;
 
 // Connect to database
-mongoose.connect(MONGO_URI);
+mongoose.connect(process.env.MONGO_URI)
+    .then(() => console.log('Connected to Database'))
+    .catch((err) => console.log('ERROR: ' + err));
 
 // Import database models
 const { User } = require('./src/models/user');
@@ -127,19 +130,20 @@ app.get('/get_permits', (req, res) => {
 app.put('/assign_permit', (req, res) => {
     Plate.findOne({ number: req.body.number })
         .then((doc) => {
-            let tempDoc = doc.toObject();
-            for (let permit of tempDoc.permits) {
-                if (permit._id == req.body.permit_id) {
-                    res.status(401).send({ msg: 'Permit Already Added'});
+            for (let permit of doc.permits) {
+                if (permit == req.body.permit_id) {
+                    res.status(401).send({ msg: 'Permit Already Owned' });
                     return;
                 }
             }
+            doc.permits.push(req.body.permit_id);
+            doc.save();
+            res.send(doc);
         })
         .catch((err) => res.status(400).send({ msg: 'ERROR: ' + err }));
-    Plate.findOneAndUpdate({ number: req.body.number }, 
-        { $push: {permits: req.body.permit_id }})
-        .then(() => res.status(200).send({ msg: 'Added a Permit' }))
-        .catch((err) => res.status(400).send({ msg: 'ERROR: ' + err }));
-})
+    //Plate.findOneAndUpdate({ number: req.body.number })
+
+
+});
 
 exports.api = onRequest(app);

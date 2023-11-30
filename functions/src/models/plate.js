@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const PlateSchema = new mongoose.Schema({
-    name: { type: String, lowercase: true, unique: true },
-    org: { type: mongoose.Schema.Types.ObjectId, ref: 'Org' }
+    number: { type: String, lowercase: true, unique: true },
+    permits: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Permit' }]
 });
 
 exports.Plate = mongoose.model('Plate', PlateSchema);
