@@ -126,7 +126,9 @@ app.get('/get_permits', (req, res) => {
         .catch((err) => res.status(400).send({ msg: 'ERROR: ' + err }));
 });
 
-// Not Working
+// Used for assigning permits to a license plates
+// Request should include license plate number (number) and permit id (permit_id)
+// Will append id of the permit to plate's list of permits and update the database
 app.put('/assign_permit', (req, res) => {
     Plate.findOne({ number: req.body.number })
         .then((doc) => {
@@ -141,9 +143,6 @@ app.put('/assign_permit', (req, res) => {
             res.send(doc);
         })
         .catch((err) => res.status(400).send({ msg: 'ERROR: ' + err }));
-    //Plate.findOneAndUpdate({ number: req.body.number })
-
-
 });
 
 exports.api = onRequest(app);
