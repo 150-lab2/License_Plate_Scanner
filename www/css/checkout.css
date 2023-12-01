@@ -149,23 +149,3 @@ select{
 option{
     color: black;
 }
-table{
-    color: #01273C;
-    text-align: left;
-    border: 2px solid #01273C;
-    margin: auto;
-    margin-top: 30px;
-    border-collapse: collapse;
-}
-td, tr{
-    color: #01273C;
-    border: 2px solid #01273C;
-
-}
-caption{
-    color: #01273C;
-    font-weight: bold;
-}
-input{
-    margin-top: 2%;
-}

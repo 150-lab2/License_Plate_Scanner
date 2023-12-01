@@ -4,6 +4,7 @@
         <title>PlateMate | Admin</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/admin.css">
+        <script src="js/admin.js"></script>
     </head>
     <body>
         <div class="flex-container">
@@ -19,15 +20,18 @@
                 <div id="feed">
                     <img src="https://api.thecatapi.com/v1/images/search?format=src" alt="">
                     <p id="name">Officer WhiskerBuster</p>
-                    <p style="font-weight: bold;">Organization: Furrsno State Cativersity</p>
+                    <p style="font-weight: bold;">Organization: Fresno State University</p>
             
                     <form>
-                        <legend>Query License Plate Number</legend>
+                        <legend>Query License Plate Number</legend><br>
+                        <img id="yes" src="images/yes.jpeg" hidden="true">
+                        <img id="no" src="images/no.jpg" hidden="true"><br><br>
                         <input type="text" id="plate_number" name="plate_number" required>
                         <!-- <input type="submit" value="Find"> use when we have server ready-->
                     </form>
-                    
+
                     <button onclick="verify()">Verify</button>
+                    
                 </div>
             </div>
         </div>

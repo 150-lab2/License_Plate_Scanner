@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <script src="js/checkout.js"></script>
+        <title>PlateMate | My Profile</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/user.css">
+        <script src="js/user.js"></script>
     </head>
     <body>
-        <p>This is the checkout page. Confirm Purchase takes user back to profile, with updated profile.</p>
-        <button onclick="confirm()">Confirm Purchase</button>
+        <div class="flex-container">
+            <header>
+                <nav>
+                    <h1>PlateMate<sup>&copy;</sup></h1>
+                    <ul>
+                        <li><a href="log_in.html">Log Out</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="content">
+                <div id="feed">
+                    <img src="images/cat.jpg" alt="Profile Picture">
+                    <p id="name">Wulfric Tailsworth</p>
+                    <div id="showcase">
+                        <p id="empty">Add a permit to view it here.</p>
+                        <button onclick="confirm()">Confirm Purchase</button>
+                    </div>
+                    <button onclick="addPermit()" >Add Permit</button>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
